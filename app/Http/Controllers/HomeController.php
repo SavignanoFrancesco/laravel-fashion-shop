@@ -13,7 +13,7 @@ class HomeController extends Controller
 
         ];
         //pagina da mostrare
-        return view('home');
+        return view('home',$data);
     }
     //
     public function products(){
@@ -22,6 +22,6 @@ class HomeController extends Controller
 
         ];
         //pagina da mostrare
-        return view('products');
+        return view('products',$data);
     }
 }
