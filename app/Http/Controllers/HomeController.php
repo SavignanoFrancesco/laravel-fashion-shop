@@ -9,9 +9,8 @@ class HomeController extends Controller
 {
     //
     public function index(){
+
         //collections da passare alla view
-        $dresses_collection = Dress::all();
-        dd($dresses_collection);
         $data = [
 
         ];
@@ -20,9 +19,12 @@ class HomeController extends Controller
     }
     //
     public function products(){
-        //collections da passare alla view
-        $data = [
 
+        //collections da passare alla view
+        $dresses_collection = Dress::all();
+        // dd($dresses_collection);
+        $data = [
+            'dresses' => $dresses_collection,
         ];
         //pagina da mostrare
         return view('products',$data);
