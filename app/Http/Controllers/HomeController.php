@@ -3,12 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Dress;
 
 class HomeController extends Controller
 {
     //
     public function index(){
         //collections da passare alla view
+        $dresses_collection = Dress::all();
+        dd($dresses_collection);
         $data = [
 
         ];
