@@ -23,6 +23,7 @@ class HomeController extends Controller
         //collections da passare alla view
         $dresses_collection = Dress::all();
         // dd($dresses_collection);
+        
         $data = [
             'dresses' => $dresses_collection,
         ];
