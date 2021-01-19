@@ -22,10 +22,13 @@ class HomeController extends Controller
 
         //collections da passare alla view
         $dresses_collection = Dress::all();
-        // dd($dresses_collection);
-        
+        //dd($dresses_collection);
+        $dresses_array = Dress::all()->toArray();
+        //dd($dresses_array);
+
         $data = [
-            'dresses' => $dresses_collection,
+            'dresses_collection' => $dresses_collection,
+            'dresses_array' => $dresses_array,
         ];
         //pagina da mostrare
         return view('products',$data);
